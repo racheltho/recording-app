@@ -18,11 +18,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOG-xC-9pR">
                                 <rect key="frame" x="223" y="250" width="155" height="100"/>
-                                <state key="normal" title="Button" image="microphone">
+                                <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="141" y="250" width="137" height="100"/>
+                                    <rect key="frame" x="141" y="254" width="125" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sRd-qn-GGU"/>
@@ -33,26 +33,31 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="148" y="358" width="118" height="27"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG0-SK-byh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button" image="stop">
+                                <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="156" y="480" width="155" height="100"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="141" y="480" width="122" height="100"/>
                                 </variation>
+                                <connections>
+                                    <action selector="stopRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1rg-nt-Ha3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="DG0-SK-byh" secondAttribute="centerY" id="5ju-Qr-lej"/>
+                            <constraint firstAttribute="centerX" secondItem="DG0-SK-byh" secondAttribute="centerX" id="Dos-Z7-SjT"/>
                             <constraint firstAttribute="centerY" secondItem="cOG-xC-9pR" secondAttribute="centerY" id="FDR-LD-VLu"/>
                             <constraint firstAttribute="centerX" secondItem="cOG-xC-9pR" secondAttribute="centerX" id="TgS-zD-kP9"/>
+                            <constraint firstItem="dOG-ZE-pnL" firstAttribute="top" secondItem="DG0-SK-byh" secondAttribute="bottom" constant="20" id="ejw-CB-RGY"/>
                             <constraint firstAttribute="centerX" secondItem="Uvy-qz-cuf" secondAttribute="centerX" id="tu0-cV-BEU"/>
+                            <constraint firstItem="Uvy-qz-cuf" firstAttribute="top" secondItem="cOG-xC-9pR" secondAttribute="bottom" constant="10" id="vOe-af-4vP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -61,7 +66,9 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="tu0-cV-BEU"/>
-                                <exclude reference="5ju-Qr-lej"/>
+                                <exclude reference="vOe-af-4vP"/>
+                                <exclude reference="Dos-Z7-SjT"/>
+                                <exclude reference="ejw-CB-RGY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -71,7 +78,9 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="tu0-cV-BEU"/>
-                                <include reference="5ju-Qr-lej"/>
+                                <include reference="vOe-af-4vP"/>
+                                <include reference="Dos-Z7-SjT"/>
+                                <include reference="ejw-CB-RGY"/>
                             </mask>
                         </variation>
                     </view>
