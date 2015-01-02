@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +33,7 @@
                                     <action selector="stopRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1rg-nt-Ha3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOG-xC-9pR">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOG-xC-9pR">
                                 <rect key="frame" x="223" y="250" width="155" height="100"/>
                                 <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,7 +43,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.72673330918695556" green="0.87416411988296305" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cOG-xC-9pR" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="B4Q-e8-tIG"/>
                             <constraint firstAttribute="centerX" secondItem="DG0-SK-byh" secondAttribute="centerX" id="Dos-Z7-SjT"/>
@@ -59,11 +60,11 @@
                                 <exclude reference="DG0-SK-byh"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="B4Q-e8-tIG"/>
-                                <exclude reference="m5f-9m-bKz"/>
                                 <exclude reference="Kbu-EU-9vA"/>
                                 <exclude reference="R0d-A1-4KO"/>
                                 <exclude reference="Dos-Z7-SjT"/>
+                                <exclude reference="B4Q-e8-tIG"/>
+                                <exclude reference="m5f-9m-bKz"/>
                                 <exclude reference="ejw-CB-RGY"/>
                             </mask>
                         </variation>
@@ -73,13 +74,13 @@
                                 <include reference="DG0-SK-byh"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Kbu-EU-9vA"/>
+                                <include reference="R0d-A1-4KO"/>
+                                <include reference="Dos-Z7-SjT"/>
                                 <include reference="B4Q-e8-tIG"/>
                                 <exclude reference="JbU-jH-juu"/>
                                 <include reference="m5f-9m-bKz"/>
                                 <exclude reference="via-Z1-1wu"/>
-                                <include reference="Kbu-EU-9vA"/>
-                                <include reference="R0d-A1-4KO"/>
-                                <include reference="Dos-Z7-SjT"/>
                                 <include reference="ejw-CB-RGY"/>
                             </mask>
                         </variation>
@@ -180,7 +181,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.72673330920000001" green="0.87416411989999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="nrr-vv-hpK" secondAttribute="trailing" constant="35" id="4xw-mx-CqZ"/>
                             <constraint firstItem="Etj-bX-ryp" firstAttribute="top" secondItem="JhB-jI-Jg6" secondAttribute="bottom" constant="20" id="5PN-WO-kpa"/>
@@ -205,18 +206,18 @@
                                 <exclude reference="JhB-jI-Jg6"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="QuS-KT-wmk"/>
-                                <exclude reference="ScJ-yf-euf"/>
+                                <exclude reference="5PN-WO-kpa"/>
+                                <exclude reference="qdU-eI-JAC"/>
                                 <exclude reference="QCB-3a-iiz"/>
                                 <exclude reference="ktl-wu-xst"/>
-                                <exclude reference="G2w-oL-gFM"/>
-                                <exclude reference="Qz9-ss-36M"/>
-                                <exclude reference="4xw-mx-CqZ"/>
-                                <exclude reference="xyn-gU-boF"/>
-                                <exclude reference="qdU-eI-JAC"/>
+                                <exclude reference="QuS-KT-wmk"/>
+                                <exclude reference="ScJ-yf-euf"/>
                                 <exclude reference="rGj-Vk-cjL"/>
                                 <exclude reference="yJW-lk-xin"/>
-                                <exclude reference="5PN-WO-kpa"/>
+                                <exclude reference="4xw-mx-CqZ"/>
+                                <exclude reference="xyn-gU-boF"/>
+                                <exclude reference="G2w-oL-gFM"/>
+                                <exclude reference="Qz9-ss-36M"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -229,18 +230,18 @@
                                 <include reference="JhB-jI-Jg6"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="QuS-KT-wmk"/>
-                                <include reference="ScJ-yf-euf"/>
+                                <include reference="5PN-WO-kpa"/>
+                                <include reference="qdU-eI-JAC"/>
                                 <include reference="QCB-3a-iiz"/>
                                 <include reference="ktl-wu-xst"/>
-                                <include reference="G2w-oL-gFM"/>
-                                <include reference="Qz9-ss-36M"/>
-                                <include reference="4xw-mx-CqZ"/>
-                                <include reference="xyn-gU-boF"/>
-                                <include reference="qdU-eI-JAC"/>
+                                <include reference="QuS-KT-wmk"/>
+                                <include reference="ScJ-yf-euf"/>
                                 <include reference="rGj-Vk-cjL"/>
                                 <include reference="yJW-lk-xin"/>
-                                <include reference="5PN-WO-kpa"/>
+                                <include reference="4xw-mx-CqZ"/>
+                                <include reference="xyn-gU-boF"/>
+                                <include reference="G2w-oL-gFM"/>
+                                <include reference="Qz9-ss-36M"/>
                             </mask>
                         </variation>
                     </view>
