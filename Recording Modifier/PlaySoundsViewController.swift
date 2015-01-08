@@ -30,6 +30,19 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(
+            AVAudioSessionRouteChangeNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: {
+                (note:NSNotification!) in
+                //println("change route \(note.userInfo)")
+                
+                println("current output :\(AVAudioSession.sharedInstance().currentRoute.outputs[0].UID)")
+                if (AVAudioSession.sharedInstance().currentRoute.outputs[0].UID) == "Built-In Receiver" {
+                    
+                    AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
+                    
+                }
+        })
     }
 
     override func didReceiveMemoryWarning() {
