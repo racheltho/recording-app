@@ -10,7 +10,6 @@ Highlights are:
 - Use of constraints and auto layout enabled so layout looks nice on all devices
 - Segues to move between two screens.  The recorded audio file is sent with the segue.
 - "Recording..." message is shown only while app is recording and otherwise hidden.
-
-Note: when played from an iphone, you must either use headphones or hold it next to your ear like you would for a phone conversation to hear the sound.  I would like to update the app to play the sound louder (in "speaker phone mode") in the future.
+- Without headphones, uses the "built-in speaker" instead of the "built-in receiver" (the ear speaker for calls).  Switches back to "built-in speaker" once headphones are unplugged 
 
 ![alt tag](https://github.com/racheltho/recording-app/blob/master/ScreenCaps/recording_app.gif)
